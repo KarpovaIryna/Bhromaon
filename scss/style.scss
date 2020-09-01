@@ -1,0 +1,327 @@
+@import "normalize";
+@import "layout";
+@import "elements";
+@import url("https://fonts.googleapis.com/css2?family=Aleo:wght@300;400;700&family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap");
+@font-face {
+  font-family: "MyriadPro-Regular";
+  src: url("../fonts/MyriadPro-Regular.woff") format("woff2"),
+    url("../fonts/MyriadPro-Regular.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font: 400 16px/1.6 "Aleo", serif;
+  position: relative;
+}
+/* Layout */
+.ba-container {
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1110px;
+}
+.ba-header {
+  background-color: #5474fd;
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+  }
+  &__logo {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font: 700 24px/1 "Josefin Sans", sans-serif;
+    letter-spacing: 0.1em;
+    position: relative;
+    z-index: 4;
+    padding-top: 5px;
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.3s;
+    }
+  }
+  &__nav {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    height: fit-content;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    background-color: #5474fd;
+    padding-top: 50px;
+    &.open {
+      top: 0;
+      transition: 0.8s;
+      & ~ .ba-menu-toggle::before {
+        transform: translateY(10px) rotate(-45deg);
+      }
+
+      & ~ .ba-menu-toggle::after {
+        transform: translateY(-10px) rotate(45deg);
+      }
+
+      & ~ .ba-menu-toggle span {
+        opacity: 0;
+      }
+    }
+  }
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    padding: 15px 0;
+    border-top: 2px solid #fff;
+    &:last-child {
+      border-bottom: 2px solid #fff;
+    }
+  }
+  &__link {
+    color: #fff;
+    text-decoration-line: none;
+    text-transform: uppercase;
+    font: 400 18px/26px "Aleo", serif;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .ba-header {
+    height: 80px;
+    position: absolute;
+    top: calc(100vh - 80px);
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    &__wrapper {
+      padding-top: 27px;
+    }
+    &__logo {
+      padding-top: 0;
+    }
+    &__list {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      padding: 0;
+      flex-direction: row;
+    }
+    &__nav {
+      position: unset;
+      padding-top: 0;
+      width: unset;
+      background-color: unset;
+    }
+    &__item {
+      margin-left: 46px;
+      border: none;
+      padding: 0;
+      &:last-child {
+        border-bottom: none;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    &__link {
+      color: #fff;
+      text-decoration-line: none;
+      text-transform: uppercase;
+      font: 400 14px/26px "Aleo", serif;
+      &:after {
+        display: block;
+        content: " ";
+        height: 2px;
+        width: 0%;
+        background-color: #fff;
+        transition: width 0.3s ease-in-out;
+      }
+      &:hover:after,
+      &:focus:after {
+        width: 100%;
+      }
+    }
+  }
+  .ba-menu-toggle {
+    display: none;
+  }
+}
+.ba-menu-toggle {
+  width: 40px;
+  height: 24px;
+  border: none;
+  background: none;
+  outline: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0;
+  position: relative;
+  z-index: 4;
+  &::before,
+  &::after {
+    content: " ";
+  }
+  &::before,
+  &::after,
+  & span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  @media screen and (min-width: 1024px) {
+    display: none;
+  }
+}
+.ba-intro {
+  min-height: 100vh;
+  background-image: url(../img/bg-intro.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  &__wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__title {
+    margin: 0;
+    text-transform: uppercase;
+    color: #fff;
+    font: 700 48px/1 "Josefin Sans", sans-serif;
+    letter-spacing: 0.1em;
+    padding-bottom: 5px;
+  }
+  &__description {
+    margin: 0;
+    color: #fff;
+    font: 300 22px/26px "Josefin Sans", sans-serif;
+    letter-spacing: 0.31em;
+    padding-bottom: 50px;
+  }
+  &__scroll{
+	  display: flex;
+	  flex-direction:column;
+	  position: absolute;
+	  bottom:15%;
+	  text-align: center;
+	  color: #fff;
+	  font: 300 14px/26px "Josefin Sans", sans-serif;
+	  letter-spacing: 0.2em;
+	  animation-duration:6s;
+	  animation-iteration-count: infinite;
+  }
+}
+@keyframes bounceIn {
+	0% {
+		bottom:20%;
+	}
+	25%{
+		bottom:15%;
+	}
+	50% {
+		bottom:20%;
+	}
+	75% {
+		bottom:15%;
+	}
+	100% {
+		bottom:20%;
+	}
+}
+
+.bounceIn {
+	-webkit-animation-name: bounceIn; 
+	animation-name: bounceIn;
+}
+.ba-form {
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0;
+  width:100%;
+  border: 2px solid #fff;
+  @media screen and (min-width:640px){
+	  width:80%;
+  }
+  @media screen and (min-width:1024px){
+	  width:650px;
+  }
+  &__input {
+    border: none;
+    width: 80%;
+    height: 100%;
+    padding: 0;
+    width: 500px;
+	 text-align: center;
+
+    &::placeholder {
+      font: 300 14px/26px "Josefin Sans", sans-serif;
+      letter-spacing: 0.2em;
+    }
+    &:placeholder-shown {
+      text-overflow: ellipsis;
+	 }
+	 &:hover, &:focus{
+		 background-color:#84848249;
+	 }
+	 @media screen and (min-width:640px){
+		 width: 100%;
+	 }
+	 @media screen and (min-width:640px){
+		width: 500px;
+	 }
+  }
+  &__button {
+	 border: none;
+	 border-left: 2px solid #fff;
+    background-color: #5474fd;
+    color: #fff;
+    text-transform: uppercase;
+    width: 80px;
+	 height: 100%;
+	 display: flex;
+	 align-items:center;
+	 justify-content: center;
+    & span {
+		display: none;
+		@media screen and (min-width:640px){
+
+		display: unset;
+		padding-right: 10px;
+		}
+    }
+    & svg {
+
+		 @media screen and (min-width:640px){
+			 
+		 }
+	 }
+	 &:hover, &:active{
+		 background-color: #848482;
+	 }
+	 @media screen and (min-width:640px){
+		width:150px; 
+	 }
+  }
+}
