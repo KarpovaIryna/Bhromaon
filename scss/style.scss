@@ -233,25 +233,26 @@ body {
     color: #fff;
     font: 300 14px/26px "Josefin Sans", sans-serif;
     letter-spacing: 0.2em;
-    animation-duration: 6s;
+    animation-duration: 7s;
     animation-iteration-count: infinite;
+    animation-timing-function: linear;
   }
-}
-@keyframes bounceIn {
-  0% {
-    bottom: 20%;
-  }
-  25% {
-    bottom: 15%;
-  }
-  50% {
-    bottom: 20%;
-  }
-  75% {
-    bottom: 15%;
-  }
-  100% {
-    bottom: 20%;
+  @keyframes bounceIn {
+    0% {
+      bottom: 20%;
+    }
+    25% {
+      bottom: 15%;
+    }
+    50% {
+      bottom: 20%;
+    }
+    75% {
+      bottom: 15%;
+    }
+    100% {
+      bottom: 20%;
+    }
   }
 }
 .bounceIn {
@@ -501,12 +502,12 @@ body {
     justify-content: center;
     flex-direction: column;
     min-height: 100vh;
-	 @media screen and (min-width: 640px) {
+    @media screen and (min-width: 640px) {
       min-height: 50vh;
-	 }
-	 @media screen and (min-width:1025px){
-		min-height: 100vh;
-	 }
+    }
+    @media screen and (min-width: 1025px) {
+      min-height: 100vh;
+    }
   }
 }
 .ba-ocean {
@@ -526,10 +527,10 @@ body {
     @media screen and (min-width: 640px) {
       align-items: flex-end;
       min-height: 50vh;
-	 }
-	 @media screen and (min-width:1025px){
-		min-height: 100vh;
-	 }
+    }
+    @media screen and (min-width: 1025px) {
+      min-height: 100vh;
+    }
   }
 }
 .ba-tour {
@@ -547,169 +548,210 @@ body {
     width: 48%;
   }
   &__country {
-	 margin: 0;
-	 font: 300 20px/26px "Josefin Sans", sans-serif;
-	 letter-spacing: .075em;
-	 padding-bottom: 22px;
+    margin: 0;
+    font: 300 20px/26px "Josefin Sans", sans-serif;
+    letter-spacing: 0.075em;
+    padding-bottom: 22px;
     @media screen and (min-width: 640px) {
     }
     @media screen and (min-width: 1024px) {
     }
   }
   &__hotel {
-	 margin: 0;
-	 font: 300 20px/26px "Josefin Sans", sans-serif;
-	 text-transform: uppercase;
-	 padding-bottom: 22px;
+    margin: 0;
+    font: 300 20px/26px "Josefin Sans", sans-serif;
+    text-transform: uppercase;
+    padding-bottom: 22px;
     @media screen and (min-width: 640px) {
     }
     @media screen and (min-width: 1024px) {
     }
   }
   &__description {
-	 margin: 0;
-	 font: 300 16px/26px "Josefin Sans", sans-serif;
-	 padding-bottom: 45px;
+    margin: 0;
+    font: 300 16px/26px "Josefin Sans", sans-serif;
+    padding-bottom: 45px;
     @media screen and (min-width: 640px) {
     }
     @media screen and (min-width: 1024px) {
     }
   }
   &__link {
-	 margin: 0;
-	 font: 400 13px/26px "Aleo", serif;
-	 letter-spacing: .075em;
-	 text-transform: uppercase;
-text-decoration: none;
-color: #fff;
-padding: 10px 35px;
-background: linear-gradient(
-	45deg,
-	rgba(73, 106, 254, 1) 0%,
-	rgba(73, 106, 254, 1) 39%,
-	rgba(84, 115, 253, 1) 39%,
-	rgba(84, 115, 253, 1) 100%
- );
-display: inline-block;
-width: fit-content;
-border: 2px solid transparent;
-&:hover,
-&:focus {
-  border: 2px solid #fff;
-}
-@media screen and (min-width:640px){
-	font: 400 16px/26px "Aleo", serif;
-	padding: 18px 60px;
-}
+    margin: 0;
+    font: 400 13px/26px "Aleo", serif;
+    letter-spacing: 0.075em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 35px;
+    background: linear-gradient(
+      45deg,
+      rgba(73, 106, 254, 1) 0%,
+      rgba(73, 106, 254, 1) 39%,
+      rgba(84, 115, 253, 1) 39%,
+      rgba(84, 115, 253, 1) 100%
+    );
+    display: inline-block;
+    width: fit-content;
+    border: 2px solid transparent;
+    &:hover,
+    &:focus {
+      border: 2px solid #fff;
+    }
+    @media screen and (min-width: 640px) {
+      font: 400 16px/26px "Aleo", serif;
+      padding: 18px 60px;
+    }
   }
 }
-.ba-tourist{
-background: linear-gradient(rgba(35, 35, 35, 0.9) 100%, rgba(35, 35, 35, 0.9) 100%), url(../img/tourist.png);
-background-size:cover;
+.ba-tourist {
+  background: linear-gradient(
+      rgba(35, 35, 35, 0.9) 100%,
+      rgba(35, 35, 35, 0.9) 100%
+    ),
+    url(../img/tourist.png);
+  background-size: cover;
 
-&__title{
-	font: 400 20px/1 "Aleo", serif;
-	margin:0;
-	color: #fff;
-	text-align: center;
-	padding-bottom: 50px;
-	@media screen and (min-width:640px){
-		font: 400 36px/1 "Aleo", serif;
-	}
-	@media screen and (min-width:1024px){
-		padding-bottom: 100px;
+  &__title {
+    font: 400 20px/1 "Aleo", serif;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 50px;
+    @media screen and (min-width: 640px) {
+      font: 400 36px/1 "Aleo", serif;
+    }
+    @media screen and (min-width: 1024px) {
+      padding-bottom: 100px;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px 0;
+    @media screen and (min-width: 640px) {
+      min-height: 50vh;
+    }
+    @media screen and (min-width: 1025px) {
+      min-height: 100vh;
+      padding: 0;
+    }
+  }
+}
+.ba-quote {
+  display: flex;
+  width: 100%;
+  background-color: #333333;
+  color: #fff;
+  flex-direction: column;
+  @media screen and (min-width: 640px) {
+    width: 50%;
+  }
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+    width: 100%;
+  }
+  &__picture {
+    min-width: 100%;
+    @media screen and (min-width: 1024px) {
+      min-width: unset;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    @media screen and (min-width: 640px) {
+      padding: 0;
+    }
+    @media screen and (min-width: 1024px) {
+    }
+  }
+  &__breckets {
+    width: 22px;
+    height: 19px;
+    fill: rgb(84, 116, 253);
+    margin-bottom: 4px;
+  }
+  &__author {
+    text-transform: uppercase;
+    font-style: normal;
+    font: 300 20px/26px "Josefin Sans", sans-serif;
+    padding-bottom: 25px;
+  }
+  &__words {
+    font: 300 16px/23px "Josefin Sans", sans-serif;
+    margin: 0;
+  }
+}
+.ba-footer {
+  background-color: #232323;
+  &__wrapper {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	 padding-bottom: 30px;
+	 padding-top: 30px;
+	 @media screen and (min-width:1024px){
+		padding-bottom: 50px;
+		padding-top: 110px;
+	 }
+  }
+  &__title {
+    margin: 0;
+    text-transform: uppercase;
+    font: 700 24px/26px "Josefin Sans", sans-serif;
+  }
+  &__motto {
+    margin: 0;
+    font: 300 16px/26px "Josefin Sans", sans-serif;
+  }
+  &__socials {
+    display: flex;
+    width: 166px;
+    justify-content: space-between;
+    padding-top: 25px;
+    align-items: center;
+  }
+  &__link {
+    fill: #fff;
+    svg {
+      height: 17px;
+      width: 17px;
+    }
+  }
+}
+.hidden {
+  display: none;
+}
+.facebook {
+  &:hover,
+  &:active {
+    fill: #3b5998;
+  }
+}
+.twitter{
+	&:hover, &:active{
+		fill: #1DA1F2;
 	}
 }
-&__wrapper{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	padding: 30px 0;
-	@media screen and (min-width:640px){
-	min-height: 50vh;
-	}
-	@media screen and (min-width:1025px){
-		min-height: 100vh;
-		padding:0;
+.linkedin{
+	&:hover, &:active{
+		fill: #0077B5;
 	}
 }
-}
-.ba-quote{
-	display: flex;
-	width:100%;
-	background-color:#333333;
-	color: #fff;
-	flex-direction: column;
-	@media screen and (min-width:640px){
-width: 50%;
-	}
-	@media screen and (min-width:1024px){
-		flex-direction: row;
-		width:100%;
-	}
-	&__picture{
-min-width: 100%;
-@media screen and (min-width:1024px){
-	min-width: unset;
-}
-	}
-	&__text{
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		padding: 0;
-		@media screen and (min-width:640px){
-			padding: 0;
-		}
-		@media screen and (min-width:1024px){
-			
-		}
-	}
-	&__breckets{
-		width: 22px;
-		height: 19px;
-		fill: rgb(84, 116, 253);
-		margin-bottom: 4px;
-	}
-	&__author{
-		text-transform: uppercase;
-		font-style: normal;
-font: 300 20px/26px "Josefin Sans", sans-serif;
-padding-bottom: 25px;
-
-	}
-	&__words{
-		font: 300 16px/23px "Josefin Sans", sans-serif;
-		margin:0;
+.youtube{
+	&:hover, &:active{
+		fill: #CD201F;
 	}
 }
-.ba-footer{
-	background-color: #232323;
-	&__wrapper{
-color:#fff;
-display: flex;
-flex-direction: column;
-justify-content: flex-end;
-align-items: center;
-height:30vh;
-padding-bottom: 50px;
-	}
-	&__title{
-		margin:0;
-		text-transform: uppercase;
-		font: 700 24px/26px "Josefin Sans", sans-serif;
-	}
-	&__motto{
-		margin:0;
-		font: 300 16px/26px "Josefin Sans", sans-serif;
-	}
-	&__socials{
-		display: flex;
+.pinterest{
+	&:hover, &:active{
+		fill:#CC2127;
 	}
 }
-.hidden{
-	display: none;
-}
- 

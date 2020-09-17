@@ -782,8 +782,9 @@ body {
     color: #fff;
     font: 300 14px/26px "Josefin Sans", sans-serif;
     letter-spacing: 0.2em;
-    animation-duration: 6s;
-    animation-iteration-count: infinite; }
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
 
 @keyframes bounceIn {
   0% {
@@ -1046,7 +1047,7 @@ body {
   .ba-tour__country {
     margin: 0;
     font: 300 20px/26px "Josefin Sans", sans-serif;
-    letter-spacing: .075em;
+    letter-spacing: 0.075em;
     padding-bottom: 22px; }
   .ba-tour__hotel {
     margin: 0;
@@ -1060,7 +1061,7 @@ body {
   .ba-tour__link {
     margin: 0;
     font: 400 13px/26px "Aleo", serif;
-    letter-spacing: .075em;
+    letter-spacing: 0.075em;
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;
@@ -1152,10 +1153,13 @@ body {
     color: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     align-items: center;
-    height: 30vh;
-    padding-bottom: 50px; }
+    padding-bottom: 30px;
+    padding-top: 30px; }
+    @media screen and (min-width: 1024px) {
+      .ba-footer__wrapper {
+        padding-bottom: 50px;
+        padding-top: 110px; } }
   .ba-footer__title {
     margin: 0;
     text-transform: uppercase;
@@ -1164,9 +1168,33 @@ body {
     margin: 0;
     font: 300 16px/26px "Josefin Sans", sans-serif; }
   .ba-footer__socials {
-    display: flex; }
+    display: flex;
+    width: 166px;
+    justify-content: space-between;
+    padding-top: 25px;
+    align-items: center; }
+  .ba-footer__link {
+    fill: #fff; }
+    .ba-footer__link svg {
+      height: 17px;
+      width: 17px; }
 
 .hidden {
   display: none; }
+
+.facebook:hover, .facebook:active {
+  fill: #3b5998; }
+
+.twitter:hover, .twitter:active {
+  fill: #1DA1F2; }
+
+.linkedin:hover, .linkedin:active {
+  fill: #0077B5; }
+
+.youtube:hover, .youtube:active {
+  fill: #CD201F; }
+
+.pinterest:hover, .pinterest:active {
+  fill: #CC2127; }
 
 /*# sourceMappingURL=style.css.map */
