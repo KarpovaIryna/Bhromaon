@@ -991,8 +991,7 @@ body {
 .ba-hotel {
   background-image: url(../img/hotel.png);
   background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 83vh; }
+  background-size: cover; }
   @media screen and (min-width: 1024px) {
     .ba-hotel {
       background-size: cover; } }
@@ -1003,7 +1002,10 @@ body {
     min-height: 100vh; }
     @media screen and (min-width: 640px) {
       .ba-hotel__wrapper {
-        min-height: 83vh; } }
+        min-height: 50vh; } }
+    @media screen and (min-width: 1025px) {
+      .ba-hotel__wrapper {
+        min-height: 100vh; } }
 
 .ba-ocean {
   background-image: url(../img/ocean.png);
@@ -1022,7 +1024,10 @@ body {
     @media screen and (min-width: 640px) {
       .ba-ocean__wrapper {
         align-items: flex-end;
-        min-height: 83vh; } }
+        min-height: 50vh; } }
+    @media screen and (min-width: 1025px) {
+      .ba-ocean__wrapper {
+        min-height: 100vh; } }
 
 .ba-tour {
   width: 100%;
@@ -1034,7 +1039,7 @@ body {
   padding: 45px 30px; }
   @media screen and (min-width: 640px) {
     .ba-tour {
-      width: 80%; } }
+      width: 55%; } }
   @media screen and (min-width: 1024px) {
     .ba-tour {
       width: 48%; } }
@@ -1054,17 +1059,114 @@ body {
     padding-bottom: 45px; }
   .ba-tour__link {
     margin: 0;
-    font: 400 16px/26px "Aleo", serif;
+    font: 400 13px/26px "Aleo", serif;
     letter-spacing: .075em;
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;
-    padding: 18px 60px;
+    padding: 10px 35px;
     background: linear-gradient(45deg, #496afe 0%, #496afe 39%, #5473fd 39%, #5473fd 100%);
     display: inline-block;
     width: fit-content;
     border: 2px solid transparent; }
     .ba-tour__link:hover, .ba-tour__link:focus {
       border: 2px solid #fff; }
+    @media screen and (min-width: 640px) {
+      .ba-tour__link {
+        font: 400 16px/26px "Aleo", serif;
+        padding: 18px 60px; } }
+
+.ba-tourist {
+  background: linear-gradient(rgba(35, 35, 35, 0.9) 100%, rgba(35, 35, 35, 0.9) 100%), url(../img/tourist.png);
+  background-size: cover; }
+  .ba-tourist__title {
+    font: 400 20px/1 "Aleo", serif;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 50px; }
+    @media screen and (min-width: 640px) {
+      .ba-tourist__title {
+        font: 400 36px/1 "Aleo", serif; } }
+    @media screen and (min-width: 1024px) {
+      .ba-tourist__title {
+        padding-bottom: 100px; } }
+  .ba-tourist__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 30px 0; }
+    @media screen and (min-width: 640px) {
+      .ba-tourist__wrapper {
+        min-height: 50vh; } }
+    @media screen and (min-width: 1025px) {
+      .ba-tourist__wrapper {
+        min-height: 100vh;
+        padding: 0; } }
+
+.ba-quote {
+  display: flex;
+  width: 100%;
+  background-color: #333333;
+  color: #fff;
+  flex-direction: column; }
+  @media screen and (min-width: 640px) {
+    .ba-quote {
+      width: 50%; } }
+  @media screen and (min-width: 1024px) {
+    .ba-quote {
+      flex-direction: row;
+      width: 100%; } }
+  .ba-quote__picture {
+    min-width: 100%; }
+    @media screen and (min-width: 1024px) {
+      .ba-quote__picture {
+        min-width: unset; } }
+  .ba-quote__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0; }
+    @media screen and (min-width: 640px) {
+      .ba-quote__text {
+        padding: 0; } }
+  .ba-quote__breckets {
+    width: 22px;
+    height: 19px;
+    fill: #5474fd;
+    margin-bottom: 4px; }
+  .ba-quote__author {
+    text-transform: uppercase;
+    font-style: normal;
+    font: 300 20px/26px "Josefin Sans", sans-serif;
+    padding-bottom: 25px; }
+  .ba-quote__words {
+    font: 300 16px/23px "Josefin Sans", sans-serif;
+    margin: 0; }
+
+.ba-footer {
+  background-color: #232323; }
+  .ba-footer__wrapper {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 30vh;
+    padding-bottom: 50px; }
+  .ba-footer__title {
+    margin: 0;
+    text-transform: uppercase;
+    font: 700 24px/26px "Josefin Sans", sans-serif; }
+  .ba-footer__motto {
+    margin: 0;
+    font: 300 16px/26px "Josefin Sans", sans-serif; }
+  .ba-footer__socials {
+    display: flex; }
+
+.hidden {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

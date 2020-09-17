@@ -493,7 +493,6 @@ body {
   background-image: url(../img/hotel.png);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 83vh;
   @media screen and (min-width: 1024px) {
     background-size: cover;
   }
@@ -501,11 +500,13 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-
     min-height: 100vh;
-    @media screen and (min-width: 640px) {
-      min-height: 83vh;
-    }
+	 @media screen and (min-width: 640px) {
+      min-height: 50vh;
+	 }
+	 @media screen and (min-width:1025px){
+		min-height: 100vh;
+	 }
   }
 }
 .ba-ocean {
@@ -524,8 +525,11 @@ body {
     min-height: 100vh;
     @media screen and (min-width: 640px) {
       align-items: flex-end;
-      min-height: 83vh;
-    }
+      min-height: 50vh;
+	 }
+	 @media screen and (min-width:1025px){
+		min-height: 100vh;
+	 }
   }
 }
 .ba-tour {
@@ -537,7 +541,7 @@ body {
   color: #fff;
   padding: 45px 30px;
   @media screen and (min-width: 640px) {
-    width: 80%;
+    width: 55%;
   }
   @media screen and (min-width: 1024px) {
     width: 48%;
@@ -573,12 +577,12 @@ body {
   }
   &__link {
 	 margin: 0;
-	 font: 400 16px/26px "Aleo", serif;
+	 font: 400 13px/26px "Aleo", serif;
 	 letter-spacing: .075em;
 	 text-transform: uppercase;
 text-decoration: none;
 color: #fff;
-padding: 18px 60px;
+padding: 10px 35px;
 background: linear-gradient(
 	45deg,
 	rgba(73, 106, 254, 1) 0%,
@@ -593,5 +597,119 @@ border: 2px solid transparent;
 &:focus {
   border: 2px solid #fff;
 }
+@media screen and (min-width:640px){
+	font: 400 16px/26px "Aleo", serif;
+	padding: 18px 60px;
+}
   }
 }
+.ba-tourist{
+background: linear-gradient(rgba(35, 35, 35, 0.9) 100%, rgba(35, 35, 35, 0.9) 100%), url(../img/tourist.png);
+background-size:cover;
+
+&__title{
+	font: 400 20px/1 "Aleo", serif;
+	margin:0;
+	color: #fff;
+	text-align: center;
+	padding-bottom: 50px;
+	@media screen and (min-width:640px){
+		font: 400 36px/1 "Aleo", serif;
+	}
+	@media screen and (min-width:1024px){
+		padding-bottom: 100px;
+	}
+}
+&__wrapper{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 30px 0;
+	@media screen and (min-width:640px){
+	min-height: 50vh;
+	}
+	@media screen and (min-width:1025px){
+		min-height: 100vh;
+		padding:0;
+	}
+}
+}
+.ba-quote{
+	display: flex;
+	width:100%;
+	background-color:#333333;
+	color: #fff;
+	flex-direction: column;
+	@media screen and (min-width:640px){
+width: 50%;
+	}
+	@media screen and (min-width:1024px){
+		flex-direction: row;
+		width:100%;
+	}
+	&__picture{
+min-width: 100%;
+@media screen and (min-width:1024px){
+	min-width: unset;
+}
+	}
+	&__text{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0;
+		@media screen and (min-width:640px){
+			padding: 0;
+		}
+		@media screen and (min-width:1024px){
+			
+		}
+	}
+	&__breckets{
+		width: 22px;
+		height: 19px;
+		fill: rgb(84, 116, 253);
+		margin-bottom: 4px;
+	}
+	&__author{
+		text-transform: uppercase;
+		font-style: normal;
+font: 300 20px/26px "Josefin Sans", sans-serif;
+padding-bottom: 25px;
+
+	}
+	&__words{
+		font: 300 16px/23px "Josefin Sans", sans-serif;
+		margin:0;
+	}
+}
+.ba-footer{
+	background-color: #232323;
+	&__wrapper{
+color:#fff;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+height:30vh;
+padding-bottom: 50px;
+	}
+	&__title{
+		margin:0;
+		text-transform: uppercase;
+		font: 700 24px/26px "Josefin Sans", sans-serif;
+	}
+	&__motto{
+		margin:0;
+		font: 300 16px/26px "Josefin Sans", sans-serif;
+	}
+	&__socials{
+		display: flex;
+	}
+}
+.hidden{
+	display: none;
+}
+ 
