@@ -641,12 +641,6 @@ body {
     .ba-header__nav.open {
       top: 0;
       transition: 0.8s; }
-      .ba-header__nav.open ~ .ba-menu-toggle::before {
-        transform: translateY(10px) rotate(-45deg); }
-      .ba-header__nav.open ~ .ba-menu-toggle::after {
-        transform: translateY(-10px) rotate(45deg); }
-      .ba-header__nav.open ~ .ba-menu-toggle span {
-        opacity: 0; }
   .ba-header__list {
     list-style: none;
     display: flex;

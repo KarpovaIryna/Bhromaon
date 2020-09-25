@@ -51,7 +51,7 @@ body {
   &__nav {
     position: fixed;
     top: -100%;
-    left: 0;
+	 left: 0;
     height: fit-content;
     z-index: 2;
     width: 100%;
@@ -61,17 +61,6 @@ body {
     &.open {
       top: 0;
       transition: 0.8s;
-      & ~ .ba-menu-toggle::before {
-        transform: translateY(10px) rotate(-45deg);
-      }
-
-      & ~ .ba-menu-toggle::after {
-        transform: translateY(-10px) rotate(45deg);
-      }
-
-      & ~ .ba-menu-toggle span {
-        opacity: 0;
-      }
     }
   }
   &__list {
